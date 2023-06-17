@@ -1,0 +1,9 @@
+html {
+    background-color: #DEDBD2;
+}
+
+#dojos_and_ninjas{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}

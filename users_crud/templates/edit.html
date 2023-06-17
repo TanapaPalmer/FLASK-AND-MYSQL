@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Edit Users</title>
+</head>
+<body>
+    <div class="new_user">
+        <form action="/users/update" method='post'>
+            <input type="hidden" name="id" value={{users.id}}>
+            <div class="first_line">
+                <h1 class="head">Edit User {{users.id}}</h1>
+            </div>
+            <div class="input_info">
+                <label>First Name:</label><br>
+                <input type="text" name="first_name" value="{{users.first_name}}"><br>
+                <label>Last Name:</label><br>
+                <input type="text" name="last_name" value="{{users.last_name}}"><br>
+                <label>Email:</label><br>
+                <input type="text" name="email" value="{{users.email}}"><br>
+                <input type="submit" value="Update" class="button">
+            </div>
+        <a href="/users" class="home">Home</a>
+        </form>
+    </div>
+</body>
+</html>

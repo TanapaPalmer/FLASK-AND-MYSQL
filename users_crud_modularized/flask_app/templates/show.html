@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Each User</title>
+</head>
+<body>
+    <div class="update_user">
+        <h1>USER {{users.id}}</h1>
+        <a href="/users" class="home">Home</a>
+        <div class="survey_info">
+            <p><b>Full name:</b> {{users.first_name}} {{users.last_name}}</p>
+            <p><b>Email:</b> {{users.email}}</p>
+            <p><b>Created On:</b> {{users.created_at}}</p>
+            <p><b>Last Updated On:</b> {{users.updated_at}}</p>
+        </div>
+        <a href="/users/{{users.id}}/edit">Edit</a> | <a href="/users/{{users.id}}/destroy">Delete</a>
+    </div>
+</body>
+</html>
